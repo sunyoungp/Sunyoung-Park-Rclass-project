@@ -34,9 +34,24 @@ Start R in the same directory that this script resides in `project_root/Code/Pro
 Either restart R in the correct directory, or navigate to it 
 with `setwd(...relative path to the correct directory...)`. 
 
-**NEVER** put a `setwd()` inside your code, it is bad ettiquite as it probably wonʻt work for anyone else. 
+**NEVER** put a `setwd()` inside your code, it is bad etiquette as it probably wonʻt work for anyone else. 
 
-```{r, loaddata}
+```{r, loaddata1.1}
+```
+
+I am using check.names=F because these names have spaces and parentheses and I want to preserve the original names.
+
+```{r, loaddata1.2}
+```
+
+We can look in the data dictionary for a variable explanation.
+I am using the paste function here to add the path to the filename. 
+
+sep="" adds no space when pasting. 
+
+I could have also just saved the complete path to the file and saved it as dictionary_path. It is up to you. 
+
+```{r, loaddata1.3}
 ```
 
 # Explore Data
@@ -46,6 +61,13 @@ with `setwd(...relative path to the correct directory...)`.
 ```{r, exploredata}
 ```
 
+See all the data by just typing `rawdata` at the R console.
+
+
+Rename the names of variable to keep it short and easy.
+
+```{r, exploredata2}
+```
 
 # Cleaning
 
@@ -55,14 +77,19 @@ Inspecting the data, we find some problems that need addressing.
 
 First, we know that this is a dataset for three species of penguin, but we notice that there are 9 unique species.
 
-```{r, cleandata1}
+```{r, cleandata1.1}
 ```
 
-Fix all of the errors. 
+Fix typos.
+
+```{r, cleandata1.2}
+```
+
 
 Also, letʻs shorten Species just keeping the three common names "Adelie", "Gentoo", and "Chinstrap" and delete the rest of the Species character string. 
 
-NOTE: Check your work with each change.  Debug as you go, never all at once. Make sure that the code you save in your script works without error. 
+```{r, cleandata1.3}
+```
 
 
 ### Continuous data
@@ -92,8 +119,6 @@ The logical & which requires both conditions to be true (i.e., I want to be rich
 ```
 
 
-Look better?
-
 ### Now let's look at body mass.
 
 There are penguins with body mass of <100g when the others are over 3000. 
@@ -102,41 +127,38 @@ Perhaps these are new chicks? But they are supposed to be adults. Letʻs remove 
 ```{r, cleandata4.1}
 ```
 
-
 Mass is the main size variable, so we will probably need to remove the individuals with missing masses in order to  be able to analyze the data. 
-
-Note: Some analysis methods can deal with missing values, so it's not always necessary. Or it may be fine to have it in some of the variables but probably not the size variable. 
-This should be adjusted based on your planned analysis approach. 
 
 ```{r, cleandata4.2}
 ```
 
-Does it look better?
+Note: Some analysis methods can deal with missing values, so it's not always necessary. Or it may be fine to have it in some of the variables but probably not the size variable. 
+This should be adjusted based on your planned analysis approach. 
+
 
 ### Factors
 
-We also want to have Species, Sex, and Island coded as a categorical/factor variable:
+We also want to have species, sex, and island coded as a categorical/factor variable:
 
 ```{r, cleandata5}
 ```
 
 # Bivariate Plots
 
-Make bivariate plots for any remaining continous data to ensure there are no further errors. It is a good check on the distribution of the data as well. 
+Make bivariate plots for any remaining continuous data to ensure there are no further errors. It is a good check on the distribution of the data as well. 
 
-Make histograms or densities of at least mass by discrete category, to check for any potential category errors, extra categories, etc.  
-
-You should look through all of the data, variable by variable, or by pairs of variables.
+```{r, bivariateplots}
+```
 
 
 # Finalize your cleaned dataset. 
 
-Drop any variables (columns) that you wonʻt analyze.  If you have extra levels after dropping some values, you may want to relevel your factors (this may or may not happen). 
-
-To specify new levels or orders of levels:
+Remove study name, id, and sn.
 
 ```{r, finalizedata}
 ```
+
+
 # Save data
 
 All done, data is clean now. 
@@ -145,6 +167,12 @@ makes it easier to add steps above
 
 ```{r, savedata}
 ```
+
+Location to save file.
+
+```{r, savedata2}
+```
+
 
 Finally, we save the clean data as RDS file. I suggest you save your processed and cleaned data as RDS or RDA/Rdata files, as well as a copy as .csv
 
