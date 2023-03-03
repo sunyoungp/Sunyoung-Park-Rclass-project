@@ -605,7 +605,7 @@ $ Comments              &lt;chr&gt; "Not enough blood for isotopes.", NA, NA, "A
 <p>Rename the names of variables to keep them short and easy for cleaning and using the code.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>longnames <span class="ot">&lt;-</span> <span class="fu">names</span>(rawdata)</span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(rawdata) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"study name"</span>, <span class="st">"sn"</span>, <span class="st">"species"</span>, <span class="st">"region"</span>, <span class="st">"island"</span>, <span class="st">"stage"</span>, <span class="st">"id"</span>, <span class="st">"clutch completion"</span>, <span class="st">"egg"</span>, <span class="st">"culmen length"</span>, <span class="st">"culmen depth"</span>, <span class="st">"flipper length"</span>, <span class="st">"body mass"</span>, <span class="st">"sex"</span>, <span class="st">"delta 15 n"</span>, <span class="st">"delta 13 c"</span>, <span class="st">"comment"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(rawdata) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"study_name"</span>, <span class="st">"sn"</span>, <span class="st">"species"</span>, <span class="st">"region"</span>, <span class="st">"island"</span>, <span class="st">"stage"</span>, <span class="st">"id"</span>, <span class="st">"clutch_completion"</span>, <span class="st">"egg"</span>, <span class="st">"culmen_length"</span>, <span class="st">"culmen_depth"</span>, <span class="st">"flipper_length"</span>, <span class="st">"body_mass"</span>, <span class="st">"sex"</span>, <span class="st">"delta15n"</span>, <span class="st">"delta13c"</span>, <span class="st">"comment"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 </section>
@@ -725,7 +725,7 @@ $ Comments              &lt;chr&gt; "Not enough blood for isotopes.", NA, NA, "A
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">study name</td>
+<td style="text-align: left;">study_name</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">1.00</td>
 <td style="text-align: right;">7</td>
@@ -785,7 +785,7 @@ $ Comments              &lt;chr&gt; "Not enough blood for isotopes.", NA, NA, "A
 <td style="text-align: right;">0</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">clutch completion</td>
+<td style="text-align: left;">clutch_completion</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">1.00</td>
 <td style="text-align: right;">2</td>
@@ -805,7 +805,7 @@ $ Comments              &lt;chr&gt; "Not enough blood for isotopes.", NA, NA, "A
 <td style="text-align: right;">0</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">culmen length</td>
+<td style="text-align: left;">culmen_length</td>
 <td style="text-align: right;">1</td>
 <td style="text-align: right;">1.00</td>
 <td style="text-align: right;">2</td>
@@ -881,7 +881,7 @@ $ Comments              &lt;chr&gt; "Not enough blood for isotopes.", NA, NA, "A
 <td style="text-align: left;">▇▇▆▅▃</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">culmen depth</td>
+<td style="text-align: left;">culmen_depth</td>
 <td style="text-align: right;">2</td>
 <td style="text-align: right;">0.99</td>
 <td style="text-align: right;">17.15</td>
@@ -894,7 +894,7 @@ $ Comments              &lt;chr&gt; "Not enough blood for isotopes.", NA, NA, "A
 <td style="text-align: left;">▅▅▇▇▂</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">flipper length</td>
+<td style="text-align: left;">flipper_length</td>
 <td style="text-align: right;">2</td>
 <td style="text-align: right;">0.99</td>
 <td style="text-align: right;">200.92</td>
@@ -907,7 +907,7 @@ $ Comments              &lt;chr&gt; "Not enough blood for isotopes.", NA, NA, "A
 <td style="text-align: left;">▂▇▃▅▂</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">body mass</td>
+<td style="text-align: left;">body_mass</td>
 <td style="text-align: right;">2</td>
 <td style="text-align: right;">0.99</td>
 <td style="text-align: right;">4159.78</td>
@@ -920,7 +920,7 @@ $ Comments              &lt;chr&gt; "Not enough blood for isotopes.", NA, NA, "A
 <td style="text-align: left;">▁▁▇▇▃</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">delta 15 n</td>
+<td style="text-align: left;">delta15n</td>
 <td style="text-align: right;">14</td>
 <td style="text-align: right;">0.96</td>
 <td style="text-align: right;">8.73</td>
@@ -933,7 +933,7 @@ $ Comments              &lt;chr&gt; "Not enough blood for isotopes.", NA, NA, "A
 <td style="text-align: left;">▃▇▆▅▂</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">delta 13 c</td>
+<td style="text-align: left;">delta13c</td>
 <td style="text-align: right;">13</td>
 <td style="text-align: right;">0.96</td>
 <td style="text-align: right;">-25.69</td>
@@ -971,13 +971,13 @@ $ Comments              &lt;chr&gt; "Not enough blood for isotopes.", NA, NA, "A
 <p>‘culmen length’ has an entry that says “missing” instead of a number or NA. I am going to find “missing” and replace it with NA. Then switch all culmen length entries into numeric instead of character.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># temporarily change the culmen length variable to 'cl'</span></span>
-<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>cl <span class="ot">&lt;-</span> d1<span class="sc">$</span><span class="st">'culmen length'</span> </span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>cl <span class="ot">&lt;-</span> d1<span class="sc">$</span>culmen_length </span>
 <span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a><span class="co">#find "missing" and replace it with NA</span></span>
 <span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>cl[ cl <span class="sc">==</span> <span class="st">"missing"</span> ] <span class="ot">&lt;-</span> <span class="cn">NA</span></span>
 <span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a><span class="co">#coerce to numeric</span></span>
 <span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a>cl <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(cl)  </span>
-<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a>d1<span class="sc">$</span><span class="st">`</span><span class="at">culmen length</span><span class="st">`</span> <span class="ot">&lt;-</span> cl</span>
+<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a>d1<span class="sc">$</span>culmen_length <span class="ot">&lt;-</span> cl</span>
 <span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb22-10"><a href="#cb22-10" aria-hidden="true" tabindex="-1"></a><span class="co"># look at partially fixed data again</span></span>
 <span id="cb22-11"><a href="#cb22-11" aria-hidden="true" tabindex="-1"></a>skimr<span class="sc">::</span><span class="fu">skim</span>(d1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1049,7 +1049,7 @@ $ Comments              &lt;chr&gt; "Not enough blood for isotopes.", NA, NA, "A
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">study name</td>
+<td style="text-align: left;">study_name</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">1.00</td>
 <td style="text-align: right;">7</td>
@@ -1109,7 +1109,7 @@ $ Comments              &lt;chr&gt; "Not enough blood for isotopes.", NA, NA, "A
 <td style="text-align: right;">0</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">clutch completion</td>
+<td style="text-align: left;">clutch_completion</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">1.00</td>
 <td style="text-align: right;">2</td>
@@ -1195,7 +1195,7 @@ $ Comments              &lt;chr&gt; "Not enough blood for isotopes.", NA, NA, "A
 <td style="text-align: left;">▇▇▆▅▃</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">culmen length</td>
+<td style="text-align: left;">culmen_length</td>
 <td style="text-align: right;">2</td>
 <td style="text-align: right;">0.99</td>
 <td style="text-align: right;">47.60</td>
@@ -1208,7 +1208,7 @@ $ Comments              &lt;chr&gt; "Not enough blood for isotopes.", NA, NA, "A
 <td style="text-align: left;">▇▁▁▁▁</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">culmen depth</td>
+<td style="text-align: left;">culmen_depth</td>
 <td style="text-align: right;">2</td>
 <td style="text-align: right;">0.99</td>
 <td style="text-align: right;">17.15</td>
@@ -1221,7 +1221,7 @@ $ Comments              &lt;chr&gt; "Not enough blood for isotopes.", NA, NA, "A
 <td style="text-align: left;">▅▅▇▇▂</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">flipper length</td>
+<td style="text-align: left;">flipper_length</td>
 <td style="text-align: right;">2</td>
 <td style="text-align: right;">0.99</td>
 <td style="text-align: right;">200.92</td>
@@ -1234,7 +1234,7 @@ $ Comments              &lt;chr&gt; "Not enough blood for isotopes.", NA, NA, "A
 <td style="text-align: left;">▂▇▃▅▂</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">body mass</td>
+<td style="text-align: left;">body_mass</td>
 <td style="text-align: right;">2</td>
 <td style="text-align: right;">0.99</td>
 <td style="text-align: right;">4159.78</td>
@@ -1247,7 +1247,7 @@ $ Comments              &lt;chr&gt; "Not enough blood for isotopes.", NA, NA, "A
 <td style="text-align: left;">▁▁▇▇▃</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">delta 15 n</td>
+<td style="text-align: left;">delta15n</td>
 <td style="text-align: right;">14</td>
 <td style="text-align: right;">0.96</td>
 <td style="text-align: right;">8.73</td>
@@ -1260,7 +1260,7 @@ $ Comments              &lt;chr&gt; "Not enough blood for isotopes.", NA, NA, "A
 <td style="text-align: left;">▃▇▆▅▂</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">delta 13 c</td>
+<td style="text-align: left;">delta13c</td>
 <td style="text-align: right;">13</td>
 <td style="text-align: right;">0.96</td>
 <td style="text-align: right;">-25.69</td>
@@ -1276,12 +1276,12 @@ $ Comments              &lt;chr&gt; "Not enough blood for isotopes.", NA, NA, "A
 </table>
 </div>
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># check the histogram to make sure the data seems reasonable.</span></span>
-<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(d1<span class="sc">$</span><span class="st">`</span><span class="at">culmen length</span><span class="st">`</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(d1<span class="sc">$</span>culmen_length)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <p><img src="processingfile_v2_files/figure-html/cleandata2-1.png" class="img-fluid" width="672"></p>
 </div>
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co"># check with a bivariate plot with mass.</span></span>
-<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(d1<span class="sc">$</span><span class="st">`</span><span class="at">body mass</span><span class="st">`</span>, d1<span class="sc">$</span><span class="st">`</span><span class="at">culmen length</span><span class="st">`</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(d1<span class="sc">$</span>body_mass, d1<span class="sc">$</span>culmen_length)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <p><img src="processingfile_v2_files/figure-html/cleandata2-2.png" class="img-fluid" width="672"></p>
 </div>
@@ -1301,7 +1301,7 @@ $ Comments              &lt;chr&gt; "Not enough blood for isotopes.", NA, NA, "A
 <pre><code>[1] 429 511 457</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>cl[ <span class="sc">!</span><span class="fu">is.na</span>(cl) <span class="sc">&amp;</span> cl<span class="sc">&gt;</span><span class="dv">300</span> ] <span class="ot">&lt;-</span> cl[ <span class="sc">!</span><span class="fu">is.na</span>(cl) <span class="sc">&amp;</span> cl<span class="sc">&gt;</span><span class="dv">300</span> ]<span class="sc">/</span><span class="dv">10</span>  </span>
-<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>d2<span class="sc">$</span><span class="st">`</span><span class="at">culmen length</span><span class="st">`</span> <span class="ot">&lt;-</span> cl</span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>d2<span class="sc">$</span>culmen_length <span class="ot">&lt;-</span> cl</span>
 <span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a>skimr<span class="sc">::</span><span class="fu">skim</span>(d2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
@@ -1372,7 +1372,7 @@ $ Comments              &lt;chr&gt; "Not enough blood for isotopes.", NA, NA, "A
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">study name</td>
+<td style="text-align: left;">study_name</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">1.00</td>
 <td style="text-align: right;">7</td>
@@ -1432,7 +1432,7 @@ $ Comments              &lt;chr&gt; "Not enough blood for isotopes.", NA, NA, "A
 <td style="text-align: right;">0</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">clutch completion</td>
+<td style="text-align: left;">clutch_completion</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">1.00</td>
 <td style="text-align: right;">2</td>
@@ -1518,7 +1518,7 @@ $ Comments              &lt;chr&gt; "Not enough blood for isotopes.", NA, NA, "A
 <td style="text-align: left;">▇▇▆▅▃</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">culmen length</td>
+<td style="text-align: left;">culmen_length</td>
 <td style="text-align: right;">2</td>
 <td style="text-align: right;">0.99</td>
 <td style="text-align: right;">43.92</td>
@@ -1531,7 +1531,7 @@ $ Comments              &lt;chr&gt; "Not enough blood for isotopes.", NA, NA, "A
 <td style="text-align: left;">▃▇▇▆▁</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">culmen depth</td>
+<td style="text-align: left;">culmen_depth</td>
 <td style="text-align: right;">2</td>
 <td style="text-align: right;">0.99</td>
 <td style="text-align: right;">17.15</td>
@@ -1544,7 +1544,7 @@ $ Comments              &lt;chr&gt; "Not enough blood for isotopes.", NA, NA, "A
 <td style="text-align: left;">▅▅▇▇▂</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">flipper length</td>
+<td style="text-align: left;">flipper_length</td>
 <td style="text-align: right;">2</td>
 <td style="text-align: right;">0.99</td>
 <td style="text-align: right;">200.92</td>
@@ -1557,7 +1557,7 @@ $ Comments              &lt;chr&gt; "Not enough blood for isotopes.", NA, NA, "A
 <td style="text-align: left;">▂▇▃▅▂</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">body mass</td>
+<td style="text-align: left;">body_mass</td>
 <td style="text-align: right;">2</td>
 <td style="text-align: right;">0.99</td>
 <td style="text-align: right;">4159.78</td>
@@ -1570,7 +1570,7 @@ $ Comments              &lt;chr&gt; "Not enough blood for isotopes.", NA, NA, "A
 <td style="text-align: left;">▁▁▇▇▃</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">delta 15 n</td>
+<td style="text-align: left;">delta15n</td>
 <td style="text-align: right;">14</td>
 <td style="text-align: right;">0.96</td>
 <td style="text-align: right;">8.73</td>
@@ -1583,7 +1583,7 @@ $ Comments              &lt;chr&gt; "Not enough blood for isotopes.", NA, NA, "A
 <td style="text-align: left;">▃▇▆▅▂</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">delta 13 c</td>
+<td style="text-align: left;">delta13c</td>
 <td style="text-align: right;">13</td>
 <td style="text-align: right;">0.96</td>
 <td style="text-align: right;">-25.69</td>
@@ -1598,11 +1598,11 @@ $ Comments              &lt;chr&gt; "Not enough blood for isotopes.", NA, NA, "A
 </tbody>
 </table>
 </div>
-<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(d2<span class="sc">$</span><span class="st">`</span><span class="at">culmen length</span><span class="st">`</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(d2<span class="sc">$</span>culmen_length)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <p><img src="processingfile_v2_files/figure-html/cleandata3.2-1.png" class="img-fluid" width="672"></p>
 </div>
-<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(d2<span class="sc">$</span><span class="st">`</span><span class="at">body mass</span><span class="st">`</span>, d2<span class="sc">$</span><span class="st">`</span><span class="at">culmen length</span><span class="st">`</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(d2<span class="sc">$</span>body_mass, d2<span class="sc">$</span>culmen_length)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <p><img src="processingfile_v2_files/figure-html/cleandata3.2-2.png" class="img-fluid" width="672"></p>
 </div>
@@ -1612,7 +1612,7 @@ $ Comments              &lt;chr&gt; "Not enough blood for isotopes.", NA, NA, "A
 <h3 class="anchored" data-anchor-id="now-lets-look-at-body-mass.">Now let’s look at body mass.</h3>
 <p>There are penguins with body mass of &lt;100g when the others are over 3000. Perhaps these are new chicks? But they are supposed to be adults. Letʻs remove them.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(d2<span class="sc">$</span><span class="st">`</span><span class="at">body mass</span><span class="st">`</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(d2<span class="sc">$</span>body_mass)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <p><img src="processingfile_v2_files/figure-html/cleandata4.1-1.png" class="img-fluid" width="672"></p>
 </div>
@@ -1620,7 +1620,7 @@ $ Comments              &lt;chr&gt; "Not enough blood for isotopes.", NA, NA, "A
 <p>Mass is the main size variable, so we will probably need to remove the individuals with missing masses in order to be able to analyze the data.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>d3 <span class="ot">&lt;-</span> d2</span>
-<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>mm <span class="ot">&lt;-</span> d3<span class="sc">$</span><span class="st">`</span><span class="at">body mass</span><span class="st">`</span></span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>mm <span class="ot">&lt;-</span> d3<span class="sc">$</span>body_mass</span>
 <span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a><span class="co"># replace tiny masses with NA</span></span>
 <span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a>mm[ mm <span class="sc">&lt;</span> <span class="dv">100</span> ] <span class="ot">&lt;-</span> <span class="cn">NA</span>       </span>
@@ -1700,7 +1700,7 @@ $ Comments              &lt;chr&gt; "Not enough blood for isotopes.", NA, NA, "A
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">study name</td>
+<td style="text-align: left;">study_name</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">1.00</td>
 <td style="text-align: right;">7</td>
@@ -1760,7 +1760,7 @@ $ Comments              &lt;chr&gt; "Not enough blood for isotopes.", NA, NA, "A
 <td style="text-align: right;">0</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">clutch completion</td>
+<td style="text-align: left;">clutch_completion</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">1.00</td>
 <td style="text-align: right;">2</td>
@@ -1846,7 +1846,7 @@ $ Comments              &lt;chr&gt; "Not enough blood for isotopes.", NA, NA, "A
 <td style="text-align: left;">▇▇▆▅▃</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">culmen length</td>
+<td style="text-align: left;">culmen_length</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">1.00</td>
 <td style="text-align: right;">43.90</td>
@@ -1859,7 +1859,7 @@ $ Comments              &lt;chr&gt; "Not enough blood for isotopes.", NA, NA, "A
 <td style="text-align: left;">▅▇▇▆▁</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">culmen depth</td>
+<td style="text-align: left;">culmen_depth</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">1.00</td>
 <td style="text-align: right;">17.17</td>
@@ -1872,7 +1872,7 @@ $ Comments              &lt;chr&gt; "Not enough blood for isotopes.", NA, NA, "A
 <td style="text-align: left;">▅▅▇▇▂</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">flipper length</td>
+<td style="text-align: left;">flipper_length</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">1.00</td>
 <td style="text-align: right;">200.79</td>
@@ -1885,7 +1885,7 @@ $ Comments              &lt;chr&gt; "Not enough blood for isotopes.", NA, NA, "A
 <td style="text-align: left;">▂▇▃▅▂</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">body mass</td>
+<td style="text-align: left;">body_mass</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">1.00</td>
 <td style="text-align: right;">4196.17</td>
@@ -1898,7 +1898,7 @@ $ Comments              &lt;chr&gt; "Not enough blood for isotopes.", NA, NA, "A
 <td style="text-align: left;">▃▇▅▃▂</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">delta 15 n</td>
+<td style="text-align: left;">delta15n</td>
 <td style="text-align: right;">12</td>
 <td style="text-align: right;">0.96</td>
 <td style="text-align: right;">8.74</td>
@@ -1911,7 +1911,7 @@ $ Comments              &lt;chr&gt; "Not enough blood for isotopes.", NA, NA, "A
 <td style="text-align: left;">▃▇▆▅▂</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">delta 13 c</td>
+<td style="text-align: left;">delta13c</td>
 <td style="text-align: right;">11</td>
 <td style="text-align: right;">0.97</td>
 <td style="text-align: right;">-25.68</td>
@@ -1926,11 +1926,11 @@ $ Comments              &lt;chr&gt; "Not enough blood for isotopes.", NA, NA, "A
 </tbody>
 </table>
 </div>
-<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(d3<span class="sc">$</span><span class="st">`</span><span class="at">body mass</span><span class="st">`</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(d3<span class="sc">$</span>body_mass)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <p><img src="processingfile_v2_files/figure-html/cleandata4.2-1.png" class="img-fluid" width="672"></p>
 </div>
-<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(d3<span class="sc">$</span><span class="st">`</span><span class="at">body mass</span><span class="st">`</span>, d3<span class="sc">$</span><span class="st">`</span><span class="at">culmen length</span><span class="st">`</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(d3<span class="sc">$</span>body_mass, d3<span class="sc">$</span>culmen_length)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <p><img src="processingfile_v2_files/figure-html/cleandata4.2-2.png" class="img-fluid" width="672"></p>
 </div>
@@ -2017,7 +2017,7 @@ $ Comments              &lt;chr&gt; "Not enough blood for isotopes.", NA, NA, "A
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">study name</td>
+<td style="text-align: left;">study_name</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">1.00</td>
 <td style="text-align: right;">7</td>
@@ -2057,7 +2057,7 @@ $ Comments              &lt;chr&gt; "Not enough blood for isotopes.", NA, NA, "A
 <td style="text-align: right;">0</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">clutch completion</td>
+<td style="text-align: left;">clutch_completion</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">1.00</td>
 <td style="text-align: right;">2</td>
@@ -2180,7 +2180,7 @@ $ Comments              &lt;chr&gt; "Not enough blood for isotopes.", NA, NA, "A
 <td style="text-align: left;">▇▇▆▅▃</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">culmen length</td>
+<td style="text-align: left;">culmen_length</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">1.00</td>
 <td style="text-align: right;">43.90</td>
@@ -2193,7 +2193,7 @@ $ Comments              &lt;chr&gt; "Not enough blood for isotopes.", NA, NA, "A
 <td style="text-align: left;">▅▇▇▆▁</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">culmen depth</td>
+<td style="text-align: left;">culmen_depth</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">1.00</td>
 <td style="text-align: right;">17.17</td>
@@ -2206,7 +2206,7 @@ $ Comments              &lt;chr&gt; "Not enough blood for isotopes.", NA, NA, "A
 <td style="text-align: left;">▅▅▇▇▂</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">flipper length</td>
+<td style="text-align: left;">flipper_length</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">1.00</td>
 <td style="text-align: right;">200.79</td>
@@ -2219,7 +2219,7 @@ $ Comments              &lt;chr&gt; "Not enough blood for isotopes.", NA, NA, "A
 <td style="text-align: left;">▂▇▃▅▂</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">body mass</td>
+<td style="text-align: left;">body_mass</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">1.00</td>
 <td style="text-align: right;">4196.17</td>
@@ -2232,7 +2232,7 @@ $ Comments              &lt;chr&gt; "Not enough blood for isotopes.", NA, NA, "A
 <td style="text-align: left;">▃▇▅▃▂</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">delta 15 n</td>
+<td style="text-align: left;">delta15n</td>
 <td style="text-align: right;">12</td>
 <td style="text-align: right;">0.96</td>
 <td style="text-align: right;">8.74</td>
@@ -2245,7 +2245,7 @@ $ Comments              &lt;chr&gt; "Not enough blood for isotopes.", NA, NA, "A
 <td style="text-align: left;">▃▇▆▅▂</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">delta 13 c</td>
+<td style="text-align: left;">delta13c</td>
 <td style="text-align: right;">11</td>
 <td style="text-align: right;">0.97</td>
 <td style="text-align: right;">-25.68</td>
@@ -2267,19 +2267,19 @@ $ Comments              &lt;chr&gt; "Not enough blood for isotopes.", NA, NA, "A
 <h1>Bivariate Plots</h1>
 <p>Make bivariate plots for any remaining continuous data to ensure there are no further errors. It is a good check on the distribution of the data as well.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(d3<span class="sc">$</span><span class="st">`</span><span class="at">body mass</span><span class="st">`</span>, d3<span class="sc">$</span><span class="st">`</span><span class="at">culmen depth</span><span class="st">`</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(d3<span class="sc">$</span>body_mass, d3<span class="sc">$</span>culmen_length)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <p><img src="processingfile_v2_files/figure-html/bivariateplots-1.png" class="img-fluid" width="672"></p>
 </div>
-<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(d3<span class="sc">$</span><span class="st">`</span><span class="at">body mass</span><span class="st">`</span>, d3<span class="sc">$</span><span class="st">`</span><span class="at">flipper length</span><span class="st">`</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(d3<span class="sc">$</span>body_mass, d3<span class="sc">$</span>flipper_length)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <p><img src="processingfile_v2_files/figure-html/bivariateplots-2.png" class="img-fluid" width="672"></p>
 </div>
-<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(d3<span class="sc">$</span><span class="st">`</span><span class="at">body mass</span><span class="st">`</span>, d3<span class="sc">$</span><span class="st">`</span><span class="at">delta 15 n</span><span class="st">`</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(d3<span class="sc">$</span>body_mass, d3<span class="sc">$</span>delta15n)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <p><img src="processingfile_v2_files/figure-html/bivariateplots-3.png" class="img-fluid" width="672"></p>
 </div>
-<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(d3<span class="sc">$</span><span class="st">`</span><span class="at">body mass</span><span class="st">`</span>, d3<span class="sc">$</span><span class="st">`</span><span class="at">delta 13 c</span><span class="st">`</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(d3<span class="sc">$</span>body_mass, d3<span class="sc">$</span>delta13c)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <p><img src="processingfile_v2_files/figure-html/bivariateplots-4.png" class="img-fluid" width="672"></p>
 </div>
@@ -2289,7 +2289,7 @@ $ Comments              &lt;chr&gt; "Not enough blood for isotopes.", NA, NA, "A
 <h1>Finalize your cleaned dataset.</h1>
 <p>Remove study name, id, and sn as they are not necessary for data analysis.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>d3 <span class="ot">&lt;-</span> d3 <span class="sc">%&gt;%</span> <span class="fu">select</span>(<span class="sc">-</span><span class="fu">c</span>(<span class="st">'study name'</span>, <span class="st">'id'</span>, <span class="st">'sn'</span>)) </span>
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>d3 <span class="ot">&lt;-</span> d3 <span class="sc">%&gt;%</span> <span class="fu">select</span>(<span class="sc">-</span><span class="fu">c</span>(<span class="st">'study_name'</span>, <span class="st">'id'</span>, <span class="st">'sn'</span>)) </span>
 <span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a>skimr<span class="sc">::</span><span class="fu">skim</span>(d3)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <table class="table table-sm table-striped">
@@ -2383,7 +2383,7 @@ $ Comments              &lt;chr&gt; "Not enough blood for isotopes.", NA, NA, "A
 <td style="text-align: right;">0</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">clutch completion</td>
+<td style="text-align: left;">clutch_completion</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">1.00</td>
 <td style="text-align: right;">2</td>
@@ -2493,7 +2493,7 @@ $ Comments              &lt;chr&gt; "Not enough blood for isotopes.", NA, NA, "A
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">culmen length</td>
+<td style="text-align: left;">culmen_length</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">1.00</td>
 <td style="text-align: right;">43.90</td>
@@ -2506,7 +2506,7 @@ $ Comments              &lt;chr&gt; "Not enough blood for isotopes.", NA, NA, "A
 <td style="text-align: left;">▅▇▇▆▁</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">culmen depth</td>
+<td style="text-align: left;">culmen_depth</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">1.00</td>
 <td style="text-align: right;">17.17</td>
@@ -2519,7 +2519,7 @@ $ Comments              &lt;chr&gt; "Not enough blood for isotopes.", NA, NA, "A
 <td style="text-align: left;">▅▅▇▇▂</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">flipper length</td>
+<td style="text-align: left;">flipper_length</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">1.00</td>
 <td style="text-align: right;">200.79</td>
@@ -2532,7 +2532,7 @@ $ Comments              &lt;chr&gt; "Not enough blood for isotopes.", NA, NA, "A
 <td style="text-align: left;">▂▇▃▅▂</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">body mass</td>
+<td style="text-align: left;">body_mass</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">1.00</td>
 <td style="text-align: right;">4196.17</td>
@@ -2545,7 +2545,7 @@ $ Comments              &lt;chr&gt; "Not enough blood for isotopes.", NA, NA, "A
 <td style="text-align: left;">▃▇▅▃▂</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">delta 15 n</td>
+<td style="text-align: left;">delta15n</td>
 <td style="text-align: right;">12</td>
 <td style="text-align: right;">0.96</td>
 <td style="text-align: right;">8.74</td>
@@ -2558,7 +2558,7 @@ $ Comments              &lt;chr&gt; "Not enough blood for isotopes.", NA, NA, "A
 <td style="text-align: left;">▃▇▆▅▂</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">delta 13 c</td>
+<td style="text-align: left;">delta13c</td>
 <td style="text-align: right;">11</td>
 <td style="text-align: right;">0.97</td>
 <td style="text-align: right;">-25.68</td>

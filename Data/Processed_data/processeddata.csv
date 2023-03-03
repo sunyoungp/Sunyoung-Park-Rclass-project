@@ -1,4 +1,4 @@
-"species","region","island","stage","clutch completion","egg","culmen length","culmen depth","flipper length","body mass","sex","delta 15 n","delta 13 c","comment"
+"species","region","island","stage","clutch_completion","egg","culmen_length","culmen_depth","flipper_length","body_mass","sex","delta15n","delta13c","comment"
 "Adelie","Anvers","Torgersen","Adult, 1 Egg Stage","Yes","2007-11-11",39.1,18.7,181,3750,"MALE",NA,NA,"Not enough blood for isotopes."
 "Adelie","Anvers","Torgersen","Adult, 1 Egg Stage","Yes","2007-11-11",39.5,17.4,186,3800,"FEMALE",8.94956,-24.69454,NA
 "Adelie","Anvers","Torgersen","Adult, 1 Egg Stage","Yes","2007-11-16",40.3,18,195,3250,"FEMALE",8.36821,-25.33302,NA

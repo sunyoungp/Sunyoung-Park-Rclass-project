@@ -48,7 +48,7 @@ skimr::skim(rawdata)
 ## ---- exploredata2 --------
 
 longnames <- names(rawdata)
-names(rawdata) <- c("study name", "sn", "species", "region", "island", "stage", "id", "clutch completion", "egg", "culmen length", "culmen depth", "flipper length", "body mass", "sex", "delta 15 n", "delta 13 c", "comment")
+names(rawdata) <- c("study_name", "sn", "species", "region", "island", "stage", "id", "clutch_completion", "egg", "culmen_length", "culmen_depth", "flipper_length", "body_mass", "sex", "delta15n", "delta13c", "comment")
 
 ## ---- cleandata1.1 --------
 
@@ -97,22 +97,22 @@ unique(d1$species)
 ## ---- cleandata2 --------
 
 # temporarily change the culmen length variable to 'cl'
-cl <- d1$'culmen length' 
+cl <- d1$culmen_length 
 
 #find "missing" and replace it with NA
 cl[ cl == "missing" ] <- NA
 #coerce to numeric
 cl <- as.numeric(cl)  
-d1$`culmen length` <- cl
+d1$culmen_length <- cl
 
 # look at partially fixed data again
 skimr::skim(d1)
 
 # check the histogram to make sure the data seems reasonable.
-hist(d1$`culmen length`)
+hist(d1$culmen_length)
 
 # check with a bivariate plot with mass.
-plot(d1$`body mass`, d1$`culmen length`)
+plot(d1$body_mass, d1$culmen_length)
 
 
 ## ---- cleandata3.1 --------
@@ -124,21 +124,21 @@ cl[ cl > 300 ]
 ## ---- cleandata3.2 --------
 cl[ !is.na(cl) & cl>300 ]
 cl[ !is.na(cl) & cl>300 ] <- cl[ !is.na(cl) & cl>300 ]/10  
-d2$`culmen length` <- cl
+d2$culmen_length <- cl
 
 skimr::skim(d2)
-hist(d2$`culmen length`)
+hist(d2$culmen_length)
 
-plot(d2$`body mass`, d2$`culmen length`)
+plot(d2$body_mass, d2$culmen_length)
 
 
 ## ---- cleandata4.1 --------
-hist(d2$`body mass`)
+hist(d2$body_mass)
 
 
 ## ---- cleandata4.2 --------
 d3 <- d2
-mm <- d3$`body mass`
+mm <- d3$body_mass
 
 # replace tiny masses with NA
 mm[ mm < 100 ] <- NA       
@@ -150,8 +150,8 @@ nas <- which( is.na(mm) )
 d3 <- d3[ -nas, ]
 
 skimr::skim(d3)
-hist(d3$`body mass`)
-plot(d3$`body mass`, d3$`culmen length`)
+hist(d3$body_mass)
+plot(d3$body_mass, d3$culmen_length)
 
 
 ## ---- cleandata5 --------
@@ -163,14 +163,14 @@ skimr::skim(d3)
 
 
 ## ---- bivariateplots --------
-plot(d3$`body mass`, d3$`culmen depth`)
-plot(d3$`body mass`, d3$`flipper length`)
-plot(d3$`body mass`, d3$`delta 15 n`)
-plot(d3$`body mass`, d3$`delta 13 c`)
+plot(d3$body_mass, d3$culmen_length)
+plot(d3$body_mass, d3$flipper_length)
+plot(d3$body_mass, d3$delta15n)
+plot(d3$body_mass, d3$delta13c)
 
 ## ---- finalizedata --------
 
-d3 <- d3 %>% select(-c('study name', 'id', 'sn')) 
+d3 <- d3 %>% select(-c('study_name', 'id', 'sn')) 
 skimr::skim(d3)
 
 ## ---- savedata --------
