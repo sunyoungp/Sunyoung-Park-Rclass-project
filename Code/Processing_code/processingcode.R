@@ -186,23 +186,3 @@ save_data_location_csv <- "../../Data/Processed_data/processeddata.csv"
 write.csv(processeddata, file = save_data_location_csv, row.names=FALSE)
 
 
-## ---- notes --------
-# anything you don't want loaded into the Quarto file but 
-# keep in the R file, just give it its own label and then don't include that label
-# in the Quarto file. 
-# For example, you may try excluding some of the excessive comments. 
-
-# Dealing with NA or "bad" data:
-# removing anyone who had "faulty" or missing data is one approach.
-# it's often not the best. based on your question and your analysis approach,
-# you might want to do cleaning differently (e.g. keep individuals with some missing information)
-
-# Saving data as RDS:
-# I suggest you save your processed and cleaned data as RDS or RDA/Rdata files. 
-# This preserves coding like factors, characters, numeric, etc. 
-# If you save as CSV, that information would get lost.
-# However, CSV is better for sharing with others since it's plain text. 
-
-# If you do CSV, you must to write down somewhere what each variable is.
-# See here for some suggestions on how to store your processed data:
-# http://www.sthda.com/english/wiki/saving-data-into-r-data-format-rds-and-rdata

@@ -6,8 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Marguerite Butler">
-<meta name="dcterms.date" content="2023-02-15">
+<meta name="author" content="Sunyoung Park">
+<meta name="dcterms.date" content="2023-03-03">
 
 <title>An example cleaning script with code pulled in from R script</title>
 <style>
@@ -120,14 +120,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>Marguerite Butler </p>
+             <p>Sunyoung Park </p>
           </div>
   </div>
     
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">February 15, 2023</p>
+      <p class="date">March 3, 2023</p>
     </div>
   </div>
   
@@ -137,15 +137,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 </header>
 
-<section id="processing-script-data-cleaning-with-code-pulled-in-from-script" class="level1">
-<h1>Processing script (data cleaning) with code pulled in from script</h1>
-<p>This is essentially the same as the other Quarto file, but now the code is not inside this file. Instead, it is pulled in from the R script using the code chunk labels.</p>
-</section>
 <section id="setup" class="level1">
 <h1>Setup</h1>
-<p>This needs to run to load the R script so we can include the code chunks below.</p>
-<p>Note that you can pull in more than one R script if you want.</p>
-<p>Load needed packages. Instead of having R commands here, we can have R do it by pulls in the code from the R script according to the labels. Here the code chuck below is replaced with the <code>packages</code> code chunk from <code>processingcode.R</code>.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#load needed packages. make sure they are installed.</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">require</span>(dplyr) <span class="co">#for data processing/cleaning</span></span>
@@ -157,7 +150,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h1>Data loading</h1>
 <p>Start R in the same directory that this script resides in <code>project_root/Code/Processing_code</code>. If you need to check your working directory, use <code>getwd()</code>.</p>
 <p>Either restart R in the correct directory, or navigate to it with <code>setwd(...relative path to the correct directory...)</code>.</p>
-<p><strong>NEVER</strong> put a <code>setwd()</code> inside your code, it is bad etiquette as it probably wonʻt work for anyone else.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>data_location <span class="ot">&lt;-</span> <span class="st">"../../Data/Raw_data/penguins_raw_dirty.csv"</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>data_path <span class="ot">&lt;-</span> <span class="st">"../../Data/Raw_data/"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -168,7 +160,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <p>We can look in the data dictionary for a variable explanation. I am using the paste function here to add the path to the filename.</p>
 <p>sep=“” adds no space when pasting.</p>
-<p>I could have also just saved the complete path to the file and saved it as dictionary_path. It is up to you.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>dictionary <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="fu">paste</span>(data_path, <span class="st">"datadictionary.csv"</span>, <span class="at">sep=</span><span class="st">""</span>))</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(dictionary)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -611,7 +602,7 @@ $ Comments              &lt;chr&gt; "Not enough blood for isotopes.", NA, NA, "A
 </div>
 </div>
 <p>See all the data by just typing <code>rawdata</code> at the R console.</p>
-<p>Rename the names of variable to keep it short and easy.</p>
+<p>Rename the names of variables to keep them short and easy for cleaning and using the code.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>longnames <span class="ot">&lt;-</span> <span class="fu">names</span>(rawdata)</span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(rawdata) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"study name"</span>, <span class="st">"sn"</span>, <span class="st">"species"</span>, <span class="st">"region"</span>, <span class="st">"island"</span>, <span class="st">"stage"</span>, <span class="st">"id"</span>, <span class="st">"clutch completion"</span>, <span class="st">"egg"</span>, <span class="st">"culmen length"</span>, <span class="st">"culmen depth"</span>, <span class="st">"flipper length"</span>, <span class="st">"body mass"</span>, <span class="st">"sex"</span>, <span class="st">"delta 15 n"</span>, <span class="st">"delta 13 c"</span>, <span class="st">"comment"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -620,7 +611,6 @@ $ Comments              &lt;chr&gt; "Not enough blood for isotopes.", NA, NA, "A
 </section>
 <section id="cleaning" class="level1">
 <h1>Cleaning</h1>
-<p>Inspecting the data, we find some problems that need addressing.</p>
 <section id="species-names" class="level3">
 <h3 class="anchored" data-anchor-id="species-names">Species names</h3>
 <p>First, we know that this is a dataset for three species of penguin, but we notice that there are 9 unique species.</p>
@@ -642,7 +632,7 @@ $ Comments              &lt;chr&gt; "Not enough blood for isotopes.", NA, NA, "A
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>d1 <span class="ot">&lt;-</span> rawdata</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Fix typos.</p>
+<p>Fix typos in the species name.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>ii <span class="ot">&lt;-</span> <span class="fu">grep</span>(<span class="st">"PengTin"</span>, d1<span class="sc">$</span>species)</span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>d1<span class="sc">$</span>species[ii] <span class="ot">&lt;-</span> <span class="st">"Adelie Penguin (Pygoscelis adeliae)"</span></span>
@@ -959,7 +949,7 @@ $ Comments              &lt;chr&gt; "Not enough blood for isotopes.", NA, NA, "A
 </table>
 </div>
 </div>
-<p>Also, letʻs shorten Species just keeping the three common names “Adelie”, “Gentoo”, and “Chinstrap” and delete the rest of the Species character string.</p>
+<p>Also, letʻs shorten species just keeping the three common names “Adelie”, “Gentoo”, and “Chinstrap” and delete the rest of the species character string.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>ii <span class="ot">&lt;-</span> <span class="fu">grep</span>(<span class="st">"(Pygoscelis adeliae)"</span>, d1<span class="sc">$</span>species)</span>
 <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>d1<span class="sc">$</span>species[ii] <span class="ot">&lt;-</span> <span class="st">"Adelie"</span></span>
@@ -978,8 +968,7 @@ $ Comments              &lt;chr&gt; "Not enough blood for isotopes.", NA, NA, "A
 </section>
 <section id="continuous-data" class="level3">
 <h3 class="anchored" data-anchor-id="continuous-data">Continuous data</h3>
-<p>There is an entry for <code>Culmen Length (mm)</code> which says “missing” instead of a number or NA. Should we delete this record (and all of the variables)? This “missing” entry also turned all culmen length entries into characters instead of numeric. That conversion to character also means that our summary function isn’t very meaningful.</p>
-<p>So let’s fix that first.</p>
+<p>‘culmen length’ has an entry that says “missing” instead of a number or NA. I am going to find “missing” and replace it with NA. Then switch all culmen length entries into numeric instead of character.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># temporarily change the culmen length variable to 'cl'</span></span>
 <span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>cl <span class="ot">&lt;-</span> d1<span class="sc">$</span><span class="st">'culmen length'</span> </span>
@@ -1297,7 +1286,6 @@ $ Comments              &lt;chr&gt; "Not enough blood for isotopes.", NA, NA, "A
 <p><img src="processingfile_v2_files/figure-html/cleandata2-2.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-<p>Notice anything funny?</p>
 <p>Now we see that there are three penguins with really really long culmens (300+mm) that could be typos. If we don’t know, we might need to remove these penguins. But let’s suppose that we somehow know that this is because of a misplaced decimal point (for example if we could verify with field records), and letʻs fix this:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>d2 <span class="ot">&lt;-</span> d1 </span>
@@ -1306,7 +1294,7 @@ $ Comments              &lt;chr&gt; "Not enough blood for isotopes.", NA, NA, "A
 <pre><code>[1]  NA 429 511  NA 457</code></pre>
 </div>
 </div>
-<p>Notice that NAʻs will match the condition <code>cl&gt;300</code>, because we donʻt really know, so R returns it to be conservative. We donʻt want NAs, so letʻs exclude them with !is.na() where the ! is “not” or the opposite of is.na. The logical &amp; which requires both conditions to be true (i.e., I want to be rich AND famous):</p>
+<p>NAʻs will match the condition <code>cl&gt;300</code>, because we donʻt really know, so R returns it to be conservative. We donʻt want NAs, so letʻs exclude them with !is.na() where the ! is “not” or the opposite of is.na. The logical &amp; which requires both conditions to be true (i.e., I want to be rich AND famous):</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>cl[ <span class="sc">!</span><span class="fu">is.na</span>(cl) <span class="sc">&amp;</span> cl<span class="sc">&gt;</span><span class="dv">300</span> ]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -2299,7 +2287,7 @@ $ Comments              &lt;chr&gt; "Not enough blood for isotopes.", NA, NA, "A
 </section>
 <section id="finalize-your-cleaned-dataset." class="level1">
 <h1>Finalize your cleaned dataset.</h1>
-<p>Remove study name, id, and sn.</p>
+<p>Remove study name, id, and sn as they are not necessary for data analysis.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>d3 <span class="ot">&lt;-</span> d3 <span class="sc">%&gt;%</span> <span class="fu">select</span>(<span class="sc">-</span><span class="fu">c</span>(<span class="st">'study name'</span>, <span class="st">'id'</span>, <span class="st">'sn'</span>)) </span>
 <span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a>skimr<span class="sc">::</span><span class="fu">skim</span>(d3)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -2589,7 +2577,7 @@ $ Comments              &lt;chr&gt; "Not enough blood for isotopes.", NA, NA, "A
 </section>
 <section id="save-data" class="level1">
 <h1>Save data</h1>
-<p>All done, data is clean now. Let’s assign at the end to some final variable makes it easier to add steps above</p>
+<p>Save the clean data as processed data.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb42"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a>processeddata <span class="ot">&lt;-</span> d3      <span class="co"># change if you did more steps</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
