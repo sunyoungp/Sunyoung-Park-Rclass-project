@@ -2,24 +2,24 @@
 
 This folder contains the raw data for this project. We begin with the data provided with the Palmerpenguins R package, which you can install in R using `install.packages("palmerpenguins")`
 
-Generally, any dataset should contain some meta-data explaining what each variable in the dataset is, or a **Data Dictionary**. 
-
 This dataset contains 17 columns, 16 data columns and one comment field, as explained in `datadictionary.csv` or the table below. 
 
-Raw data sets should **generally not be edited by hand**. It should instead be loaded and processed/cleaned using code.
+`penguins_raw_dirty.csv` contains simulated raw data with random data entry errors that need to be cleaned.
 
-Not all of these columns are interesting for analysis (e.g., `studyName`) and you may want to drop them in your processed data. 
+Note: errors were introduced by `Project_template/Code/Processing_code/typos.R
 
-As the raw data that comes with the package `penguins_raw` are pretty clean, I purposely prepared a dirtier version for you to work on that will provide a more realistic data analysis pipeline experience.
+The cleaned dataset is saved in `../Processed_data/` in both `.rda` and `.csv` versions, with a data dictionary in the `README.md`.  
 
-`penguins_raw_dirty.csv` contains some random data entry errors that need to be cleaned. If you want to see how this was created, check out `Project_template/Code/Processing_code/typos.R`
+The code for processing the raw data is in **Project_template > Code > Processing_code**, and runs from that working directory. 
 
-Your first task is to find the faulty values and clean them using the techinques weʻve been learning in class, and save the cleaned dataset in `../Processed_data/`. Please save both `.rda` and `.csv` versions, and include a data dictionary in the `README.md`.  
+# Files
 
-The code for processing the raw data should be in **Project_template > Code > Processing_code**, and should run from that working directory.  Please use **relative paths** from that working directory to load and save files. 
+`penguins_raw_dirty.csv` raw data with errors that need to be cleaned 
+`penguins_raw.csv` original raw data from Palmerpenguins R package
+`datadictionary.csv` data dictionary for raw data (also below)
+`sites.csv` list of study sites and years 
 
-
-# Data Dictionary `penquins_raw.csv`
+# Data Dictionary `penquins_raw_dirty.csv`
 
 |variable| description|
 |----------|--------------|

@@ -20,7 +20,7 @@ Be sure to use **relative paths** so that each script works from the working dir
 
 ## **`processingcode.R` - cleans raw data, outputs clean data**
 
-**Input**
+**Inputs**
 
 ```{r}
 reads in the following files from `../../Data/Raw_data/`
