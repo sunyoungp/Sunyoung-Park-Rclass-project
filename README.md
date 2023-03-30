@@ -19,7 +19,7 @@ This template lays out a data analysis project and report writing using R, Quart
 
 For more R packages supporting reproducible research check out the taskview <https://cran.r-project.org/web/views/ReproducibleResearch.html>
 
-# Template structure
+# Repository structure
 
 The template supports the notion that there should _only be one copy of code and any outputs_. Any time the intellectual content needs to be reused, it should be referred to or linked from the one copy. This way we can prevent different copies of the same content from accidentally diverging, and it is easier to maintain the project. 
 
@@ -31,29 +31,22 @@ This template also uses the convention that Folder names begin with a capital le
 * All products (manuscripts, supplement, presentation slides, web apps, etc.) go into `Products` subfolders.
 * See the various `README.md` files in those folders for some more information.
 
-# Template content
+# Repository content
 
-All of the folders contain template files that should filled with some content required for your analysis. Look inside each folder for template files that provide examples of the types of content that go there. 
-
-The template files also demonstrate how information is linked together across folders. 
 
 Please see the `README.md` files in each folder for more details.
 
-* This template has been populated with _Palmer Penguins_ morphology and life history data in the `Raw_data` folder. 
+* This repo has been populated with _Palmer Penguins_ morphology and life history data in the `Raw_data` folder. 
 * The `Processing_code` folder contains several files that load the raw data, perform a bit of cleaning, and save the result in the `Processed_data` folder. 
 * The `Analysis_code` folder contains several files that load the processed data, do an exploratory analysis, and fit a simple model. These files produce figures and some numeric output (tables), which are saved to the `results` folder.
 * The `Products` folder contains an example `bibtex` and CSL style files for references. Those files are used by the example manuscript and slides.
 * The  `Manuscript` folder contains a template for a report written as Quarto file. There is also a sub-folder containing an example template for a supplementary material file as is common in scientific articles these days.
 * The `slides` folder contains a basic example of slides made with Quarto. 
 
-**For the first project, we only have Data and Code folders.**
-The rest will come soon. 
 
 # Getting started
 
-This is a Github template repository. The best way to get it and start using it is [by following these steps.](https://help.github.com/en/articles/creating-a-repository-from-a-template)
-
-Once you got the repository, you can check out the examples by executing them in order. 
+The project can be reproduced by executing the code in the following order:
 
 1.  First run the processing code, which will produce the processed data. 
 2.  Then run the analysis scripts, which will take the processed data and produce some results. 

@@ -2,12 +2,11 @@
 
 ## Code Location:
 
-Place your various `.R` or `.qmd` scripts in the appropriate folders:
+This directory contains `.R` or `.qmd` scripts in the folders as appropriate:
 
-- Processing_code for cleaning raw data to processed data
-- Analysis_code or your analyses on cleaned data. 
+- Processing_code cleans raw data and converts to processed data
+- Analysis_code performs analyses on cleaned data. 
 
-Depending on your specific project, you might want to have further sub-folders.
 
 ## Code Design:
 
@@ -17,9 +16,22 @@ The scripts should load the appropriate data (e.g. raw or processed), perform ac
 
 Be sure to use **relative paths** so that each script works from the working directory set to the folder that the script is in. 
 
-## Required Documentation:
+## Code Documentation:
 
--  What inputs each script takes and where output is placed. 
--  If scripts need to be run in a specific order, document this. 
--  Documentation could be either as comments in the script, or in a separate text file such as this readme file. Ideally of course in both locations, especially for more complex projects. 
+## **`processingcode.R` - cleans raw data, outputs clean data**
 
+**Input**
+
+```{r}
+reads in the following files from `../../Data/Raw_data/`
+	`penguins_raw_dirty.csv` - The raw data
+	`datadictionary.csv` - The data dictionary for the raw data
+```
+
+**Outputs**
+```{r}
+outputs to `../../Data/Processed_data/`
+	`processeddata.rds` - clean data in rds (R) format
+	`processeddata.csv` - clean data in .csv format
+	`orig_names.rds` - short variable names associated with long original variable names in rds format
+```
