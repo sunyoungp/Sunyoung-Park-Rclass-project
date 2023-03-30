@@ -19,10 +19,10 @@ We found some decimal place errors in the masses. These are documented in `direc
 `Processed_data` contains the cleaned version of the data. 
 
 
-`processeddata.rda` is the cleaned version of the data.
-`processeddata.csv` is the cleaned version of the data.
-`dictionary.csv` is a data dictionary for the cleaned data.
-`orig_names.csv` contains the variable names and short names.
+* `processeddata.rda` is the cleaned version of the data.
+* `processeddata.csv` is the cleaned version of the data.
+* `dictionary.csv` is a data dictionary for the cleaned data.
+* `orig_names.csv` contains the variable names and short names.
 
 
 
